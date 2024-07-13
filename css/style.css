@@ -638,6 +638,10 @@ h5 {
   top: 12rem;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -667,6 +671,10 @@ h5 {
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -909,11 +917,45 @@ h5 {
   background-size: cover;
 }
 
+.hamburger {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(8px);
+}
+
+.hamburger-bottom {
+  transform: translateY(16px);
+}
+
 @media (max-width: 576px) {
   #hero {
     background-image: url('../images/mobile/image-hero.jpg');
     background-position: center;
   }
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .group:hover .group-hover\:scale-110 {
@@ -984,10 +1026,6 @@ h5 {
 
   .md\:items-start {
     align-items: flex-start;
-  }
-
-  .md\:items-center {
-    align-items: center;
   }
 
   .md\:justify-end {
