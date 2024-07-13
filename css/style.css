@@ -946,6 +946,22 @@ h5 {
   transform: translateY(16px);
 }
 
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translate(-7px, 7px);
+}
+
 @media (max-width: 576px) {
   #hero {
     background-image: url('../images/mobile/image-hero.jpg');
